@@ -1,4 +1,4 @@
-import { UserPositionContext } from "@/contexts/userPositionContext";
+import { UserPositionContext } from "@/contexts/UserPositionContext";
 import React from "react";
 import { useUserLocationCoords } from "@/hooks/useUserLocationCoords";
 

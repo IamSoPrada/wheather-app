@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { UserPositionProvider } from "@/providers/userPositionProvider";
+import { UserPositionProvider } from "@/providers/UserPositionProvider";
 import App from "./App";
 import "./index.css";
 

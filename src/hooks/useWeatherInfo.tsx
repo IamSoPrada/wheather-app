@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { routes } from "@/api/routes";
+import { endpoints } from "@/api/routes";
 import type { UserLocation, IWheather } from "./types";
 
 export const useWeatherInfo = () => {
@@ -15,7 +15,7 @@ export const useWeatherInfo = () => {
   }: UserLocation): Promise<void> => {
     try {
       const { data } = await axios.get(
-        routes.getWheather({ latitude, longitude })
+        endpoints.getWheather({ latitude, longitude })
       );
       setWeatherInfo(data.weather[0]);
     } catch (e: any) {
