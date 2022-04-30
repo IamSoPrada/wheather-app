@@ -1,5 +1,5 @@
 # Wheather App
-[![Maintainability](https://api.codeclimate.com/v1/badges/e5aea07e625eb68df90d/maintainability)](https://codeclimate.com/github/IamSoPrada/kanban-board-react-ts/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ca18e52a2eaf722aabb8/maintainability)](https://codeclimate.com/github/IamSoPrada/wheather-app/maintainability)
 
 This repository is a pet project of the Trello application. The project is posted on Netlify  : [click here](https://wheather-app-ts.netlify.app/).
 
