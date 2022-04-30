@@ -13,4 +13,6 @@ export type UserLocationCoords = {
 export type IWheather = {
   description: string;
   icon: string;
+  city: string;
+  temperature: string;
 };

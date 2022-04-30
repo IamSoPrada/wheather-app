@@ -60,13 +60,21 @@ type CardTitleProps = {
 export const CardTitle = styled.span<CardTitleProps>`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "1.5rem")};
   font-weight: bold;
-  margin-bottom: 16px;
+
   color: ${(props) => (props.color ? props.color : "#000")};
 `;
 
 export const CardDescr = styled.p`
   font-size: 1rem;
-  color: "#2a2a2a";
+
+  font-weight: 700;
+  color: #5a5a5a;
+`;
+export const CardSection = styled.div`
+  display: flex;
+  margin-bottom: 16px;
+  align-items: center;
+  gap: 16px;
 `;
 
 type ModalContainerLayer = {

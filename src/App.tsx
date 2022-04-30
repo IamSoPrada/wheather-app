@@ -10,7 +10,13 @@ import { endpoints } from "@/api/routes";
 function App() {
   const userPosition = useContext(UserPositionContext);
   return (
-    <AppContainer backgroundImageUrl={endpoints.getGeneratedMap(userPosition)}>
+    <AppContainer
+      backgroundImageUrl={
+        userPosition.latitude !== ""
+          ? endpoints.getGeneratedMap(userPosition)
+          : undefined
+      }
+    >
       <ModalContainer>
         Это приложение показывает погоду в вашем регионе. Необходимо разрешение
         на доступ к вашим геоданным.

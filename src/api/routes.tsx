@@ -8,7 +8,7 @@ export const endpoints = {
   },
 
   getGeneratedMap: ({ latitude, longitude }: UserLocation) => {
-    return `https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/${longitude},${latitude},10/1080x1000@2x?access_token=${
+    return `https://api.mapbox.com/styles/v1/iamsoprada/cl2m0ai3k000i15qxn2mgbkr9/static/${longitude},${latitude},10/1080x1000@2x?access_token=${
       import.meta.env.VITE_MAPBOX_API_KEY
     }`;
   },
