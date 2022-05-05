@@ -19,6 +19,8 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint", "prettier"],
   "rules": {
+    "react/function-component-definition":0,
+    "no-nested-ternary": 0,
     "react/react-in-jsx-scope": 0,
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],

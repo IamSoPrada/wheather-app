@@ -3,11 +3,7 @@ import { CardContainer, CardTitle, CardDescr, CardSection } from "@/styles";
 import { UserPositionContext } from "@/contexts/UserPositionContext";
 import { useWeatherInfo } from "@/hooks/useWeatherInfo";
 
-type CardProps = {
-  children?: React.ReactNode;
-};
-
-export function Card({ children }: CardProps) {
+export const Card: React.FC = () => {
   const userPosition = useContext(UserPositionContext);
   const { weatherInfo, getWeatherInYourRegion } = useWeatherInfo();
 
@@ -19,24 +15,6 @@ export function Card({ children }: CardProps) {
   if (!userPosition.latitude) return <CardContainer>Loading...</CardContainer>;
   return (
     <CardContainer>
-      {children}
-      <CardSection>
-        <CardTitle>latitude: </CardTitle>
-        <CardDescr>{userPosition.latitude}</CardDescr>
-      </CardSection>
-      <CardSection>
-        <CardTitle>longitude: </CardTitle>
-        <CardDescr>{userPosition.longitude}</CardDescr>
-      </CardSection>
-      <CardSection>
-        <CardTitle>city: </CardTitle>
-        <CardDescr>{weatherInfo.city}</CardDescr>
-      </CardSection>
-
-      <CardTitle color="#c3c3c3">wheather:</CardTitle>
-      <CardDescr>{weatherInfo.description}</CardDescr>
-      <CardDescr>{weatherInfo.temperature}</CardDescr>
-
       <div>
         {weatherInfo.icon !== "" && (
           <img
@@ -45,6 +23,24 @@ export function Card({ children }: CardProps) {
           />
         )}
       </div>
+      <div>
+        <CardSection>
+          <CardTitle>latitude: </CardTitle>
+          <CardDescr>{userPosition.latitude}</CardDescr>
+        </CardSection>
+        <CardSection>
+          <CardTitle>longitude: </CardTitle>
+          <CardDescr>{userPosition.longitude}</CardDescr>
+        </CardSection>
+        <CardSection>
+          <CardTitle>city: </CardTitle>
+          <CardDescr>{weatherInfo.city}</CardDescr>
+        </CardSection>
+
+        <CardTitle color="#c3c3c3">wheather:</CardTitle>
+        <CardDescr>{weatherInfo.description}</CardDescr>
+        <CardDescr fontSize="big">{weatherInfo.temperature}</CardDescr>
+      </div>
     </CardContainer>
   );
-}
+};

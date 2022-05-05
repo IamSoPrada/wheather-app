@@ -8,8 +8,14 @@ export const endpoints = {
   },
 
   getGeneratedMap: ({ latitude, longitude }: UserLocation) => {
-    return `https://api.mapbox.com/styles/v1/iamsoprada/cl2m0ai3k000i15qxn2mgbkr9/static/${longitude},${latitude},10/1080x1000@2x?access_token=${
+    return `https://api.mapbox.com/styles/v1/iamsoprada/cl2n4f9gp005k14rj26fyp7vr/static/${longitude},${latitude},10/1080x1000@2x?access_token=${
       import.meta.env.VITE_MAPBOX_API_KEY
+    }`;
+  },
+
+  getLocalNews: (): string => {
+    return `https://newsapi.org/v2/top-headlines?country=ru&apiKey=${
+      import.meta.env.VITE_NEWS_API_KEY
     }`;
   },
 };

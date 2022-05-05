@@ -16,3 +16,14 @@ export type IWheather = {
   city: string;
   temperature: string;
 };
+
+export type NewArticle = {
+  key: string;
+  url: string;
+  title: string;
+  author: string;
+  description: string;
+  source?: string;
+  urlToImage: string;
+  publishedAt: string;
+};

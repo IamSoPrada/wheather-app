@@ -5,7 +5,7 @@ import { UserPositionContext } from "@/contexts/UserPositionContext";
 import { Main } from "@/components/common/Main";
 import { Footer } from "@/components/common/Footer";
 import { AppContainer } from "@/styles";
-import { endpoints } from "@/api/routes";
+import { endpoints } from "@/api/endpoints";
 
 function App() {
   const userPosition = useContext(UserPositionContext);

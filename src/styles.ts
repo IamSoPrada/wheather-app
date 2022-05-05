@@ -11,7 +11,7 @@ export const AppContainer = styled.div<AppContainerProps>`
   justify-content: space-between;
   min-height: 100vh;
   background: ${(props) =>
-    props.backgroundImageUrl ? `url(${props.backgroundImageUrl})` : "#f3f3f3"};
+    props.backgroundImageUrl ? `url(${props.backgroundImageUrl})` : "#fff"};
 `;
 
 export const HeaderContainer = styled.div`
@@ -20,6 +20,7 @@ export const HeaderContainer = styled.div`
   min-height: 64px;
   justify-content: space-between;
   padding: 0 16px;
+  color: #fff;
 `;
 
 export const MainContainer = styled.div`
@@ -38,19 +39,20 @@ export const FooterContainer = styled.div`
   justify-content: space-between;
   padding: 0 16px;
   min-height: 64px;
+  color: #fff;
 `;
 
 export const CardContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   max-width: 500px;
   min-width: 300px;
   padding: 16px;
   border-radius: 8px;
-  background: #f3f3f3;
+  background: #fff;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
-  margin-bottom: 16px;
 `;
 type CardTitleProps = {
   color?: string;
@@ -60,13 +62,20 @@ type CardTitleProps = {
 export const CardTitle = styled.span<CardTitleProps>`
   font-size: ${(props) => (props.fontSize ? props.fontSize : "1.5rem")};
   font-weight: bold;
-
+  width: 100%;
   color: ${(props) => (props.color ? props.color : "#000")};
 `;
-
-export const CardDescr = styled.p`
-  font-size: 1rem;
-
+type CardDescr = {
+  fontSize?: "big" | "medium" | "small";
+};
+export const CardDescr = styled.p<CardDescr>`
+  font-size: ${(props) =>
+    props.fontSize === "big"
+      ? "6.5rem"
+      : props.fontSize === "medium"
+      ? "3.2rem"
+      : "1.4rem"};
+  width: 100%;
   font-weight: 700;
   color: #5a5a5a;
 `;
@@ -92,4 +101,15 @@ export const ModalContainerLayer = styled.div<ModalContainerLayer>`
   min-height: 100vh;
   z-index: 99;
   background: rgba(0, 0, 0, 0.2);
+`;
+
+export const ArticlesContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+`;
+
+export const CardLink = styled.a`
+  text-decoration: none;
 `;

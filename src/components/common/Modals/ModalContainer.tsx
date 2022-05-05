@@ -11,7 +11,7 @@ export function ModalContainer({ children }: ModalContainerProps) {
   const [isModalHidden, setIsModalHidden] = useState<boolean>(true);
 
   useEffect(() => {
-    if (!userPosition.latitude) {
+    if (userPosition.latitude === "") {
       setIsModalHidden(false);
     } else {
       setIsModalHidden(true);

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
-import { endpoints } from "@/api/routes";
+import { endpoints } from "@/api/endpoints";
 import type { UserLocation, IWheather } from "./types";
 
 export const useWeatherInfo = () => {
