@@ -14,4 +14,4 @@ Wheather app using React, Typescript, React Context. Background map generated wi
 **Todo:**
  + Add News section by country with [News API](https://newsapi.org/)
  
-![enter image description here](https://sun9-78.userapi.com/s/v1/if2/M-hMLhOAxhh1mCKHlQibaxFjeL3AxL9ueZ6gWXUFKd8W2l2iZ8egZqoQgJn6QMEcm5MnzXNnAQbPKRH0qne9nz_x.jpg?size=1279x906&quality=96&type=album)
+![enter image description here](https://sun9-20.userapi.com/s/v1/if2/MF-546zwFIpM6ZX2qkeBRem4u4-4A3aOTTI4pKGrHS49oNE0SPx28BnsPwmq3wo40kq5UJ-7G1qPnKk_-6ykAiQ6.jpg?size=1057x909&quality=96&type=album)
